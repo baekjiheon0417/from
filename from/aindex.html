@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from hompage</title>
+    <style>
+    nav{
+        background: #FFB6C1;
+        padding: 15px;
+        text-align: center;
+    }
+    .nav_link{
+        margin: 10px;
+        color:white;
+        text-decoration: none;
+    }
+    .member-section{
+        padding: 20px;
+        margin: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .hayoung{background: #87ceeb;}
+    .jiwon{background: #9370DB;}
+    .nagyung{background: #FFFF99;}
+    .chaeyoung{background: #FFA07A;}
+    .jiheon{background: #FFFFFF;}
+
+    .section{padding: 20px;}
+    .song_list{margin: 20px;}
+    .photo-gallery{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    img{
+        width: 200px;
+        height: auto;
+        border-radius: 10p
+    }
+    body{
+        background: cyan;
+    }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const memberSections = document.querySelectorAll('.member-section');
+            memberSections.forEach(section => {
+                section.addEventListener('click', function() {
+                    const memberName = section.classList[1];
+                    window.location.href = `${memberName}.html`;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<nav>
+    <a class=" nav_link" href="aindex.html">Home</a>
+    <a class=" nav_link" href="music.html">Music</a>
+</nav>
+<div id="'home" class=" section">
+<h1>Welcome to fromis9</h1>
+<div class='member-section hayoung'>송하영</div>
+<div class= "member-section jiwon">박지원</div>
+<div class=" member-section nagyung">이나경</div>
+<div class=" member-section chaeyoung">이채영</div>
+<div class=" member-section jiheon">백지헌</div>
+</div>
+
+</body>
+
+</html>
